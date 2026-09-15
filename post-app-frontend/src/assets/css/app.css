@@ -1,0 +1,15 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border: 0;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+textarea {
+    resize: vertical;
+}

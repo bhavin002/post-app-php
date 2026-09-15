@@ -13,7 +13,7 @@ class AuthMiddleware
     {
         $headers = getallheaders();
 
-        $authHeader = $headers['Authorization'] ?? '';
+        $authHeader = $headers['authorization'] ?? '';
 
         if (!$authHeader) {
 

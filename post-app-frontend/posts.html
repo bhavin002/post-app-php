@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Posts - Post App</title>
+
+    <link rel="stylesheet" href="/src/assets/css/main.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+
+        <div class="container">
+
+            <a
+                class="navbar-brand"
+                href="/posts.html"
+            >
+                Post App
+            </a>
+
+            <div class="d-flex align-items-center">
+
+                <span
+                    id="user-name"
+                    class="text-white me-3"
+                ></span>
+
+                <button
+                    id="logout-button"
+                    class="btn btn-outline-light btn-sm"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <main class="container py-5">
+
+        <div class="d-flex justify-content-between mb-4">
+
+            <h1>My Posts</h1>
+
+            <button
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#postModal"
+            >
+                Create Post
+            </button>
+
+        </div>
+
+        <div id="alert-container"></div>
+
+        <div
+            id="posts-container"
+            class="row g-4"
+        >
+        </div>
+
+    </main>
+
+
+    <!-- Post Modal -->
+
+    <div
+        class="modal fade"
+        id="postModal"
+        tabindex="-1"
+    >
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5
+                        class="modal-title"
+                        id="modal-title"
+                    >
+                        Create Post
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                    ></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <form id="post-form">
+
+                        <input
+                            type="hidden"
+                            id="post-id"
+                        >
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="post-title"
+                                class="form-control"
+                                maxlength="255"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Content
+                            </label>
+
+                            <textarea
+                                id="post-content"
+                                class="form-control"
+                                rows="5"
+                                required
+                            ></textarea>
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Save Post
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script
+        type="module"
+        src="/src/pages/posts/posts.js"
+    ></script>
+
+</body>
+
+</html>
